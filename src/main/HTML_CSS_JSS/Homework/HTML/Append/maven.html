@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-  <style>
+    <style>
         .upper {
             background: orange;
             height: 150px;
@@ -54,44 +54,27 @@
 </head>
 <body>
 <div class="upper">
-  <img src="Logo-scoala-informala-de-it.svg" alt="Logo scoala informala de IT"/>
+    <img src="../Logo-scoala-informala-de-it.svg" alt="Logo scoala informala de IT"/>
 </div>
 <div class="welcome">
-  <p>Installation guide for GIT</p>
+    <p>Installation guide for Maven</p>
 </div>
 <div class="container">
-  <div class="menu">
-    <img src="git.png" alt="logo of Git" />
-  </div>
-  <div class="one">
-    <h1> Sign in to GitLab:</h1>
-    <a href="https://gitlab.com/users/sign_in"> git-scm.com</a>
-    <h1> The steps for GIT:</h1>
-    <ol>
-      <li>Create a new user environment variable called HOME, pointing to your user’s home directory (C:\Users\username)</li>
-      <li>Add the GIT install path to PATH environment variable</li>
-      <li>Test the GIT installation with command git </li>
-      <li>Configure GIT with commands
-          <ul>
-            <li>git config --global user.name “your user”</li>
-            <li>git config --global user.email “your email”</li>
-          </ul>
-        </li>
-
-    </ol>
-    <h1> GIT repositories</h1>
-    <a href="https://github.com/"> Creating projects here: github.com</a>
-    <ol>
-      <li>Register</li>
-      <li>Create a new repository (project)</li>
-      <li>Give developer permissions to (from Settings – Members):
-        <ul>
-          <li>adim.moldovan</li>
-          <li>daniel.candrea</li>
-        </ul>
-      </li>
-    </ol>
-  </div>
+    <div class="menu">
+        <img src="../Maven.jpg" alt="logo of maven">
+    </div>
+    <div class="one">
+        <h1> Download, install and add maven to the PATH variable: </h1>
+        <a href="https://maven.apache.org/download.cgi" > maven.apache.org </a> <br/>
+        <h2> The steps for installing Java SDK:</h2>
+        <ol>
+            <li>Download the latest binary zip</li>
+            <li>Unzip to a directory of you choice</li>
+            <li>Add the path to the bin folder of the installation to PATH system variable</li>
+            <li>Create and new env variable called JAVA_HOME pointing to the JDK path</li>
+            <li>Test the Maven installation with the following command: mvn --version</li>
+        </ol>
+    </div>
 </div>
 
 </body>

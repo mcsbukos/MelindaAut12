@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+       .upper {
+            background: orange;
+            height: 150px;
+            color: orange;
+            font-size: 70px;
+            color: white;
+            text-align: center;
+            }
+         .upper > img {
+            height: 100px;
+            margin: 25px;
+            float: left;
+         }
+         .welcome {
+            background: black;
+            height: 100px;
+            margin: 0px;
+            color: orange;
+            font-size: 70px;
+          }
+          a > img {
+              width: 70px;
+              float: right;
+              margin: 10px;
+              padding: 10px;
+              padding-right: 50px;
+          }
+         .course {
+            font-weight: 900;
+            font-style: italic;
+         }
+        p {
+            margin: 0px;
+            text-indent: 50px;
+        }
+        .container{
+            display: flex;
+            gap: 50 px;
+            }
+        .menu {
+            width: 300px;
+            flex-direction: column;
+            padding-left: 50px;
+            padding-top: 2%;
+        }
+        .one > img {
+            float: left;
+            height: 150px;
+            margin-right: 50px;
+                }
+        .one {
+            float: right;
+            margin: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="upper">
+  <img src="../Logo-scoala-informala-de-it.svg" alt="Logo scoala informala de IT"/>
+</div>
+<div class="welcome">
+  <a href="../Homework.html">  <img src="../Home.png" alt="logo of homepage"/> </a>
+  <p>Installation guide for GIT</p>
+
+</div>
+<div class="container">
+  <div class="menu">
+    <img src="../git.png" alt="logo of Git" />
+  </div>
+  <div class="one">
+    <h1> Sign in to GitLab:</h1>
+    <a href="https://gitlab.com/users/sign_in"> git-scm.com</a>
+    <h1> The steps for GIT:</h1>
+    <ol>
+      <li>Create a new user environment variable called HOME, pointing to your user’s home directory (C:\Users\username)</li>
+      <li>Add the GIT install path to PATH environment variable</li>
+      <li>Test the GIT installation with command git </li>
+      <li>Configure GIT with commands
+          <ul>
+            <li>git config --global user.name “your user”</li>
+            <li>git config --global user.email “your email”</li>
+          </ul>
+        </li>
+
+    </ol>
+    <h1> GIT repositories</h1>
+    <a href="https://github.com/"> Creating projects here: github.com</a>
+    <ol>
+      <li>Register</li>
+      <li>Create a new repository (project)</li>
+      <li>Give developer permissions to (from Settings – Members):
+        <ul>
+          <li>adim.moldovan</li>
+          <li>daniel.candrea</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+</body>
+</html>

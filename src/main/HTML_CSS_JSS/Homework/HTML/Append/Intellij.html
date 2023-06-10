@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        .upper {
+  <style>
+       .upper {
             background: orange;
             height: 150px;
             color: orange;
@@ -23,21 +23,29 @@
             margin: 0px;
             color: orange;
             font-size: 70px;
-         }
+          }
+          a > img {
+              width: 70px;
+              float: right;
+              margin: 10px;
+              padding: 10px;
+              padding-right: 50px;
+          }
          .course {
             font-weight: 900;
             font-style: italic;
          }
         p {
             margin: 0px;
-            text-align: center;
+            text-indent: 50px;
         }
         .container{
             display: flex;
             gap: 50 px;
             }
         .menu {
-            width: 400px;
+            width: 300px;
+            flex-direction: column;
             padding-left: 50px;
             padding-top: 2%;
         }
@@ -50,30 +58,31 @@
             float: right;
             margin: 30px;
         }
+
     </style>
 </head>
 <body>
 <div class="upper">
-    <img src="Logo-scoala-informala-de-it.svg" alt="Logo scoala informala de IT"/>
+  <img src="../Logo-scoala-informala-de-it.svg" alt="Logo scoala informala de IT"/>
 </div>
 <div class="welcome">
-    <p>Installation guide for Maven</p>
+  <p>Installation guide for IntelliJ IDEA</p>
+  <a href="../Homework.html">  <img src="../Home.png" alt="logo of homepage"/> </a>
 </div>
 <div class="container">
-    <div class="menu">
-        <img src="Maven.jpg" alt="logo of maven">
-    </div>
-    <div class="one">
-        <h1> Download, install and add maven to the PATH variable: </h1>
-        <a href="https://maven.apache.org/download.cgi" > maven.apache.org </a> <br/>
-        <h2> The steps for installing Java SDK:</h2>
-        <ol>
-            <li>Download the latest binary zip</li>
-            <li>Unzip to a directory of you choice</li>
-            <li>Add the path to the bin folder of the installation to PATH system variable</li>
-            <li>Create and new env variable called JAVA_HOME pointing to the JDK path</li>
-            <li>Test the Maven installation with the following command: mvn --version</li>
-        </ol>
+  <div class="menu">
+    <img src="../Intellij.jpg" alt="logo of IntelliJ" />
+  </div>
+  <div class="one">
+    <h1> Download and install IntelliJ IDEA from: </h1>
+    <a href=" https://www.jetbrains.com/idea/download/download-thanks.html?platform=windows&code=IIC" > Download and install at jetbrains.com </a> <br/>
+    <h2> The steps for installing IntelliJ IDEA:</h2>
+    <ol>
+      <li>Download IntelliJ IDEA Community Edition</li>
+      <li>Install</li>
+    </ol>
+    <p> After selecting the theme, configuring the plugins (please let them all selected), you can create a
+      repository.</p>
     </div>
 </div>
 
