@@ -6,6 +6,6 @@ public class SumOfNumbers {
         for (int i=1; i<101; i++){
             number = number + i;
         }
-        System.out.println("the sum of the first 100 numbers higher than 0 is: " + number);
+        System.out.println("The sum of the first 100 numbers higher than 0 is: " + number);
     }
 }
