@@ -7,9 +7,6 @@ public class App {
         computer1.motherBoard = "random name";
         computer1.processor = "Intel";
 
-        String returnValue = computer1.showSpecs();
-       // System.out.println(returnValue);
 
-        computer1.addition(3, 4, "Result is: ");
     }
 }
