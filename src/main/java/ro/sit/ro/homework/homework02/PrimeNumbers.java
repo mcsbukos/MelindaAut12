@@ -2,17 +2,24 @@ package ro.sit.ro.homework.homework02;
 
 public class PrimeNumbers {
     public static void main(String[] args){
-        boolean isPrimitive;
-        int divide;
-        int modul;
-        for (int i=1; i<=10; i++){
-            for (int k = 1; k<i; k++) {
-                divide = i / k;
-                modul = i % k;
-                if (modul == 0)   {
-                    System.out.println("Primitive numbers are: " + i);
+        System.out.println("the prime numbers are: ");
+        int number;
+        int divisor;
+        boolean isPrime;
+
+        for (number = 2; number < 1000000; number ++){
+            isPrime = true;
+            for (divisor = 2; divisor*divisor <= number; divisor++) {
+                if (number % divisor == 0) {
+                    isPrime = false;
+                    break;
                 }
             }
+
+            if (isPrime) {
+                System.out.println(number);
+            }
+
         }
 
     }
