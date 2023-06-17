@@ -3,21 +3,20 @@ package ro.sit.ro.homework.homework02;
 public class PrimeNumbers {
     public static void main(String[] args){
         System.out.println("the prime numbers are: ");
-        int number;
-        int divisor;
-        boolean isPrime;
+        int i;
+        int j;
+        boolean isPrimeNumber;
 
-        for (number = 2; number < 1000000; number ++){
-            isPrime = true;
-            for (divisor = 2; divisor*divisor <= number; divisor++) {
-                if (number % divisor == 0) {
-                    isPrime = false;
-                    break;
-                }
+        for (i = 2; i < 1000000; i++){
+            isPrimeNumber = true;
+            for (j = 2; j*j <= i; j++) {
+                if (i % j == 0) {
+                    isPrimeNumber = false;
+                    }
             }
 
-            if (isPrime) {
-                System.out.println(number);
+            if (isPrimeNumber) {
+                System.out.println(i);
             }
 
         }
