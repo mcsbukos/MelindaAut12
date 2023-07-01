@@ -1,4 +1,4 @@
-package Udemy;
+package udemy.beginner;
 
 public class LoopsApp {
     public static void main(String[] args) {
