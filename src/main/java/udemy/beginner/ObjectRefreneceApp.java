@@ -14,10 +14,11 @@ public class ObjectRefreneceApp {
         Character energyEfficiencyCategory = 'G';
 
         String carModel = "DodgeChallenger SRT 392";
+        String carType = "Type";
         String carModelNew = new String("DodgeChallenger SRT 392");
 
-        System.out.println("Number of seats: " + numberOfSeats);
-        System.out.println("Horspower : " + horsePower);
+        System.out.println("Number of seats: " + numberOfSeats.floatValue());
+        System.out.println("Horspower : " + horsePower.floatValue());
         System.out.println("Price:  $ : " + price.floatValue());
         System.out.println("Registration number: " + registrationNumber);
         System.out.println("Combined Fuel Consumption: " + fuelConsumptionCombined);
@@ -26,6 +27,7 @@ public class ObjectRefreneceApp {
         System.out.println("Car model: " + carModel);
         System.out.println("Car model in Upper case: " + carModel.toUpperCase());
         System.out.println("Car model in lower case: " + carModel.toLowerCase());
+        System.out.println("Car Type is: " + carType.toUpperCase());
 
         System.out.println(true);
     }

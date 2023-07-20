@@ -2,7 +2,12 @@ package ro.homework.homework02;
 
 import java.util.Scanner;
 
+
 public class LeapYear {
+
+
+
+
     public static void main(String[] args) {
         System.out.println("Please give a year between 1900-2016, then press Enter");
         Scanner scanner = new Scanner(System.in);
