@@ -54,41 +54,5 @@ public class Catalog1 {
             System.out.println(student);
         }
 
-        // Sort and display the students by average and then by last name
-        System.out.println("\n The sorted set by average and last name: ");
-        TreeSet<Student> sortedSetByAverage = sortByAverage(h_Set);
-        for (Student student : sortedSetByAverage) {
-            System.out.println(student);
-        }
-
-        System.out.println("\n The sorted set by last name: ");
-        TreeSet<Student> sortedSetByLastName = sortByLastName(h_Set);
-        for (Student student : sortedSetByLastName) {
-            System.out.println(student);
-        }
-    }
-
-    public static TreeSet<Student> sortByAverage(HashSet<Student> students) {
-        TreeSet<Student> sortedSet = new TreeSet<>(new Comparator<Student>() {
-            @Override
-            public int compare(Student s1, Student s2) {
-                // Compare by average in descending order
-                return Double.compare(s2.getAverage(), s1.getAverage());
-            }
-        });
-        sortedSet.addAll(students);
-        return sortedSet;
-    }
-
-    public static TreeSet<Student> sortByLastName(HashSet<Student> students) {
-        TreeSet<Student> sortedSet = new TreeSet<>(new Comparator<Student>() {
-            @Override
-            public int compare(Student s1, Student s2) {
-                // Compare by last name in ascending order
-                return s1.getLastName().compareTo(s2.getLastName());
-            }
-        });
-        sortedSet.addAll(students);
-        return sortedSet;
     }
 }
