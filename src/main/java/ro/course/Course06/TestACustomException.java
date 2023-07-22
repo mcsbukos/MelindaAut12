@@ -1,8 +1,9 @@
 package ro.course.Course06;
 
 public class TestACustomException {
-
-    public static void main(String[] args) throws MyCustomException {
+    public static void main(String[] args) throws MyCustomException{
         throw new MyCustomException("Friendly exception message");
     }
+
 }
+
