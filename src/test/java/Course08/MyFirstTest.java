@@ -27,7 +27,7 @@ public class MyFirstTest {
        loginElement.click();
         WebElement usernameElement = chromeDriver.findElement(By.id("user"));
         usernameElement.sendKeys("zebra");
-        System.out.println("user field content: " + usernameElement.getAttribute());
+      //  System.out.println("user field content: " + usernameElement.getAttribute());
         Assert.assertEquals("username field content", "zebra", usernameElement.getAttribute("value"));
         chromeDriver.quit();
     }
