@@ -1,4 +1,4 @@
-package Course07;
+package OldTests;
 
 public class MyFirstTestNGTest {
 }
