@@ -1,11 +1,13 @@
 package Tests;
 
+
+import Utils.BrowserUtils;
 import Utils.ConfigUtils;
 import Utils.ConstantUtils;
-import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 
 public class BaseTest {
 
@@ -14,12 +16,21 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp() {
-        baseUrl = ConfigUtils.getGenericElement("hostname", ConstantUtils.CONFIG_FILE);
+        baseUrl = ConfigUtils.getGenericElement(ConstantUtils.CONFIG_FILE, "hostname");
     }
 
-    @BeforeMethod
-    public void setUpUntilTestRun() {
-        System.out.println(baseUrl);
+   public void setUpDriver(String browserName) {
+        String browser = browserName;
+        if (browser.isEmpty())
+             browser = ConfigUtils.getGenericElement(ConstantUtils.CONFIG_FILE, "browser");
+        System.out.println("Set up webdriver for browser: " + browser);
+        driver = BrowserUtils.getBrowser(browser);
+    }
+
+    @AfterMethod(alwaysRun = true)
+    public void cleanUp() {
+        if (driver !=null)
+        driver.quit();
     }
 
 }
