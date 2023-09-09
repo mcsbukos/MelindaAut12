@@ -89,12 +89,12 @@ public class LoginPage {
  //   }
 
     //easier to understand:
-//     public void goToCookiePage(){
-//        wait.until(ExpectedConditions.visibilityOf(cookieButtonElement));
-//        cookieButtonElement.click();
-//        Cookie cookie = new Cookie("cookiePageTitle", "The gibberish talking cookie");
-//        driver.manage().addCookie(cookie);
-//        }
+     public void goToCookiePage(){
+        wait.until(ExpectedConditions.visibilityOf(cookieButtonElement));
+        cookieButtonElement.click();
+        Cookie cookie = new Cookie("cookiePageTitle", "The gibberish talking cookie");
+        driver.manage().addCookie(cookie);
+        }
 
 //    public void goToAlertsPage(){
 //        wait.until(ExpectedConditions.visibilityOf(alertsButtonElement));
