@@ -27,10 +27,20 @@ public class BaseTest {
         driver = BrowserUtils.getBrowser(browser);
     }
 
-    @AfterMethod(alwaysRun = true)
-    public void cleanUp() {
-        if (driver !=null)
-        driver.quit();
-    }
+    // for cookieGoogleTest not to repeat the :
+    //        setUpDriver("chrome");
+    //        driver.get(baseUrl);. we have created the following beforeMethod
+    @BeforeMethod
+    public void startBrowser(){
+        String browserName = ConfigUtils.getGenericElement(ConstantUtils.CONFIG_FILE, "browser");
+        setUpDriver(browserName);
+        driver.get(baseUrl);
+      }
+
+//      @AfterMethod(alwaysRun = true)
+//    public void cleanUp() {
+//        if (driver !=null)
+//        driver.quit();
+ //   }
 
 }

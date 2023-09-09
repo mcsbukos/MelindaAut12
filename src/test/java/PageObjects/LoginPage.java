@@ -1,5 +1,7 @@
 package PageObjects;
 
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,6 +9,8 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class LoginPage {
     WebDriver driver;
@@ -31,10 +35,21 @@ public class LoginPage {
 
     @FindBy(xpath = "//input[@id='pass']/../..//small")
     private WebElement passErr;
+    @FindBy(css="a[href*='cookie']")
+    private WebElement cookieButtonElement;
+
+    @FindBy(css="a[href*='hover']")
+    private WebElement alertsButtonElement;
+
+    @FindBy(css="a[href*='alerts']")
+    private WebElement hoverButtonElement;
+
+    @FindBy(css="a[href*='modal']")
+    private WebElement modalButtonElement;
 
     public LoginPage(WebDriver driver){
         this.driver = driver;
-        wait = new WebDriverWait(driver, 15);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         PageFactory.initElements(driver, this);
     }
 
@@ -52,10 +67,47 @@ public class LoginPage {
     }
 
     public String getPassErr(){
-        return passErr.getText();
+        try {
+            return passErr.getText();
+        } catch (NoSuchElementException ex) {
+            return "";
+        }
     }
   public String getUsernameErr(){
+        try {
         return usernameErr.getText();
+     } catch (NoSuchElementException ex) {
+            return "";
+        }
+    }
+   //Best practice:
+// no void
+//    public CookiePage goToCookiePage(){
+//        wait.until(ExpectedConditions.visibilityOf(cookieButtonElement));
+//        cookieButtonElement.click();
+ //       return new CookiePage(driver);
+ //   }
+
+    //easier to understand:
+//     public void goToCookiePage(){
+//        wait.until(ExpectedConditions.visibilityOf(cookieButtonElement));
+//        cookieButtonElement.click();
+//        Cookie cookie = new Cookie("cookiePageTitle", "The gibberish talking cookie");
+//        driver.manage().addCookie(cookie);
+//        }
+
+//    public void goToAlertsPage(){
+//        wait.until(ExpectedConditions.visibilityOf(alertsButtonElement));
+//        alertsButtonElement.click();
+//  }
+//    public void goToHoverPage(){
+//        wait.until(ExpectedConditions.visibilityOf(hoverButtonElement));
+//        hoverButtonElement.click();
+//    }
+
+    public void goToModalPage(){
+        wait.until(ExpectedConditions.visibilityOf(modalButtonElement));
+        modalButtonElement.click();
     }
 
 }

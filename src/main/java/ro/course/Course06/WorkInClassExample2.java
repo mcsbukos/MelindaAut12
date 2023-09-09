@@ -1,9 +1,5 @@
 package ro.course.Course06;
 
-import com.sun.deploy.uitoolkit.impl.fx.AppletStageManager;
-
-import static ro.course.Course06.WorkInClass.circleArea;
-
 public class WorkInClassExample2 {
     public static void main(String[] args) throws MyCustomException {
       //  System.out.println(circleArea(-20));
