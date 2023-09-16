@@ -47,6 +47,9 @@ public class LoginPage {
     @FindBy(css="a[href*='modal']")
     private WebElement modalButtonElement;
 
+    @FindBy(css= "div.col > a")
+    private WebElement registrationButtonElement;
+
     public LoginPage(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -108,6 +111,10 @@ public class LoginPage {
     public void goToModalPage(){
         wait.until(ExpectedConditions.visibilityOf(modalButtonElement));
         modalButtonElement.click();
+    }
+    public void goToRegistrationPage(){
+        wait.until(ExpectedConditions.visibilityOf(registrationButtonElement));
+        registrationButtonElement.click();
     }
 
 }

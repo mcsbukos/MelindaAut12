@@ -5,9 +5,7 @@ import Utils.BrowserUtils;
 import Utils.ConfigUtils;
 import Utils.ConstantUtils;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 
 public class BaseTest {
 
@@ -35,6 +33,7 @@ public class BaseTest {
         String browserName = ConfigUtils.getGenericElement(ConstantUtils.CONFIG_FILE, "browser");
         setUpDriver(browserName);
         driver.get(baseUrl);
+        System.out.println("Browser has been opened");
       }
 
 //      @AfterMethod(alwaysRun = true)
@@ -43,4 +42,11 @@ public class BaseTest {
 //        driver.quit();
  //   }
 
+// alwaysRun = true, inseamna ca indiferent daca rezultatul testului a fost passed/failed, aplicatia web se va inchide
+    @AfterClass(alwaysRun = true)
+    public void afterTest() {
+        System.out.println("Close browser");
+        if (driver != null)
+            driver.quit();
+    }
 }
